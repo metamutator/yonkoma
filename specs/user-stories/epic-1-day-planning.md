@@ -32,10 +32,11 @@
 **so that** I have a ready-made structure I can customise rather than starting from scratch.
 
 ### Acceptance Criteria
-- [ ] School Day loads 5 panels: Rise & Go, School Mode, Midday Reset, After Hours, Wind Down — with their defined time labels
+- [ ] School Day loads 4 panels: Rise & Go, After School, Focus Time, Wind Down — with their defined time labels
 - [ ] Home Day loads 5 panels: Slow Morning, Morning Focus, Afternoon Drift, Tea & Recharge, Evening Close — with their defined time labels
 - [ ] Each panel displays its name and time label in the plan editor
-- [ ] Default values are editable (covered by YONKO-003)
+- [ ] Both name and time label are editable in plan mode
+- [ ] Default values are pre-filled from the template
 
 **Story Points:** 2
 **Priority:** High

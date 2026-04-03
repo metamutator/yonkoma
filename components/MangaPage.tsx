@@ -9,9 +9,10 @@ type Props = {
   onPanelChange?: (index: number, updated: Panel) => void
   onToggleTask?: (panelId: string, taskId: string) => void
   onMoodChange?: (panelId: string, mood: Panel["mood"]) => void
+  onMarkComplete?: (panelId: string) => void
 }
 
-export default function MangaPage({ panels, mode, onPanelChange, onToggleTask, onMoodChange }: Props) {
+export default function MangaPage({ panels, mode, onPanelChange, onToggleTask, onMoodChange, onMarkComplete }: Props) {
   const mainIndex = panels.findIndex(p => p.anchor === "middle") !== -1
     ? Math.floor(panels.length / 2)
     : 1
@@ -38,6 +39,7 @@ export default function MangaPage({ panels, mode, onPanelChange, onToggleTask, o
               onPanelChange={updated => onPanelChange?.(index, updated)}
               onToggleTask={taskId => onToggleTask?.(panel.id, taskId)}
               onMoodChange={mood => onMoodChange?.(panel.id, mood)}
+              onMarkComplete={() => onMarkComplete?.(panel.id)}
             />
           </div>
         )

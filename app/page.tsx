@@ -19,7 +19,7 @@ const DAY_TYPE_LABELS: Record<string, string> = {
 export default function Home() {
   const [mounted, setMounted] = useState(false)
   const router = useRouter()
-  const { today, toggleTask } = useToday()
+  const { today, toggleTask, markPanelComplete } = useToday()
   const { meta } = useStreaks()
 
   useEffect(() => setMounted(true), [])
@@ -74,6 +74,7 @@ export default function Home() {
           panels={today.panels}
           mode="active"
           onToggleTask={(panelId, taskId) => toggleTask(panelId, taskId)}
+          onMarkComplete={(panelId) => markPanelComplete(panelId)}
         />
 
         {/* Progress summary */}

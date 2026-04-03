@@ -48,9 +48,20 @@ export function useToday() {
     updateToday(day => ({ ...day, reflectedAt: new Date().toISOString() }))
   }
 
+  function markPanelComplete(panelId: string) {
+    updateToday(day => ({
+      ...day,
+      panels: day.panels.map(p =>
+        p.id === panelId && !p.completedAt
+          ? { ...p, completedAt: new Date().toISOString() }
+          : p
+      ),
+    }))
+  }
+
   function lockPlan(panels: Panel[]) {
     updateToday(day => ({ ...day, panels, planCreatedAt: new Date().toISOString() }))
   }
 
-  return { today, days, createDay, updateToday, toggleTask, setPanelMood, completeReflection, lockPlan }
+  return { today, days, createDay, updateToday, toggleTask, setPanelMood, completeReflection, lockPlan, markPanelComplete }
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bangers, DM_Sans } from "next/font/google";
 import "./globals.css";
+import DevReset from "@/components/DevReset";
 
 const bangers = Bangers({
   weight: "400",
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="en" className={`${bangers.variable} ${dmSans.variable}`}>
       <body className="bg-background text-text-primary antialiased">
         {children}
+        <DevReset />
       </body>
     </html>
   );

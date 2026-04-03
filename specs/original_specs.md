@@ -48,15 +48,14 @@ The number of chunks per day (4–6) is flexible, but the *feeling* is always: a
 
 Rather than building chunks from scratch each day, the app offers two pre-loaded templates. Choosing which applies is itself part of the morning ritual.
 
-### 🏫 School Day — 5 Panels
+### 🏫 School Day — 4 Panels
 
 | # | Panel Name | Time | Vibe |
 |---|---|---|---|
 | 1 | Rise & Go | 6:30–7:20AM | Get up, get ready, out the door |
-| 2 | School Mode | 7:20AM–1:30PM | Classes, focus, learning |
-| 3 | Midday Reset | 1:30–2:30PM | Lunch, decompress, recharge |
-| 4 | After Hours | 2:30–6:00PM | CCAs, student care, or chill |
-| 5 | Wind Down | 6:00–9:30PM | Dinner → homework/relax → sleep |
+| 2 | After School | 2:30–4:00PM | CCAs, student care, decompress |
+| 3 | Focus Time | 4:00–6:00PM | Homework, hobbies, snack |
+| 4 | Wind Down | 6:00–9:30PM | Dinner → relax → sleep |
 
 ### 🏠 Home Day — 5 Panels
 

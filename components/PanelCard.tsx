@@ -11,6 +11,7 @@ type Props = {
   onPanelChange?: (updated: Panel) => void
   onToggleTask?: (taskId: string) => void
   onMoodChange?: (mood: Panel["mood"]) => void
+  onMarkComplete?: () => void
   isMain?: boolean
 }
 
@@ -20,6 +21,7 @@ export default function PanelCard({
   onPanelChange,
   onToggleTask,
   onMoodChange,
+  onMarkComplete,
   isMain = false,
 }: Props) {
   const isCompleted = mode === "active" && !!panel.completedAt
@@ -49,7 +51,17 @@ export default function PanelCard({
     >
       {/* Header */}
       <div className="flex items-center justify-between px-3 py-2 border-b border-border">
-        <span className="text-xs text-text-muted font-body">{panel.timeLabel}</span>
+        {isPlan ? (
+          <input
+            type="text"
+            value={panel.timeLabel ?? ""}
+            onChange={e => updateField("timeLabel", e.target.value)}
+            placeholder="Time…"
+            className="text-xs bg-transparent border-b border-border outline-none focus:border-accent text-text-muted font-body w-28"
+          />
+        ) : (
+          <span className="text-xs text-text-muted font-body">{panel.timeLabel}</span>
+        )}
         {isPlan ? (
           <input
             type="text"
@@ -120,6 +132,18 @@ export default function PanelCard({
           </div>
         )}
       </div>
+
+      {/* Active mode: mark done button for panels with no tasks */}
+      {mode === "active" && panel.tasks.length === 0 && !panel.completedAt && (
+        <div className="px-3 pb-3">
+          <button
+            onClick={onMarkComplete}
+            className="w-full text-xs font-body border border-border text-text-muted rounded-sm py-1.5 hover:border-accent hover:text-accent transition-colors"
+          >
+            Mark panel done ✓
+          </button>
+        </div>
+      )}
 
       {/* Footer: Koma-chan corner stub */}
       <div className="flex justify-end px-3 pb-2">
