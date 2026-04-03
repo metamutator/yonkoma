@@ -328,9 +328,9 @@ yonkoma/
 
 | # | Question | Status |
 |---|---|---|
-| 1 | **App name**: Yonkoma or Yonko? | ⏳ Pending daughter's input |
-| 2 | **One Piece reference**: feature or problem? | ⏳ Pending daughter's input |
-| 3 | **Accent green shade**: electric (`#4ADE80`) or deeper (`#16A34A`)? | ⏳ To decide |
+| 1 | **App name**: Yonkoma or Yonko? | Yonkoma for name, yonko as a verb, or for short |
+| 2 | **One Piece reference**: feature or problem? | feature |
+| 3 | **Accent green shade**: electric (`#4ADE80`) or deeper (`#16A34A`)? | electric |
 | 4 | **Domain**: yonkoma.app / yonko.day / something else? | ⏳ Optional for v1 |
 
 ---
